@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #f2f2f2;
+      }
+
+      @keyframes slide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+
+      .logos {
+        overflow: hidden;
+        padding: 60px 0;
+        background: white;
+        white-space: nowrap;
+        position: relative;
+      }
+
+      .logos:before,
+      .logos:after {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        content: "";
+        z-index: 2;
+      }
+
+      .logos:before {
+        left: 0;
+        width: 50%;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+      }
+
+      .logos:after {
+        right: 0;
+        width: 50%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+      }
+
+      .logos:hover .logos-slide {
+        animation-play-state: paused;
+        cursor: pointer;
+      }
+
+      .logos-slide {
+        display: inline-block;
+        animation: 35s slide infinite linear;
+      }
+
+      .logos-slide img {
+        height: 50px;
+        margin: 0 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="./fotos/Celular.jpg" alt="" />
+        <img src="./fotos/computador3.jpg" alt="" />
+        <img src="./fotos/Computadora.jpg" alt="" />
+        <img src="./fotos/editors-keys-CtDrd7mWW6M-unsplash.jpg" alt="" />
+        <img src="./fotos/MaxTecnology_transparent.png" alt="" />
+        <img src="./fotos/tablet1.jpg" alt="" />
+        <img src="./fotos_2/cerrar-manos-trabajando-herramientas.jpg" alt="" />
+        <img src="./fotos_2/laptop-5673901_1920.jpg" alt="" />
+      </div>
+      <div class="logos-slide">
+        <img src="./fotos/Celular.jpg" alt="" />
+        <img src="./fotos/computador3.jpg" alt="" />
+        <img src="./fotos/Computadora.jpg" alt="" />
+        <img src="./fotos/editors-keys-CtDrd7mWW6M-unsplash.jpg" alt="" />
+        <img src="./fotos/MaxTecnology_transparent.png" alt="" />
+        <img src="./fotos/tablet1.jpg" alt="" />
+        <img src="./fotos_2/cerrar-manos-trabajando-herramientas.jpg" alt="" />
+        <img src="./fotos_2/laptop-5673901_1920.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
